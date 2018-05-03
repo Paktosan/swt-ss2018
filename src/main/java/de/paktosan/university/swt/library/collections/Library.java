@@ -23,7 +23,7 @@ public class Library {
             return null;
         }
         stock.sort(null);
-        var index = Collections.binarySearch(stock, new Book(isbn), null);
+        var index = Collections.binarySearch(stock, new Book(isbn));
         if (index < 0) {
             return null;
         } else {

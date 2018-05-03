@@ -1,6 +1,6 @@
 package de.paktosan.university.swt.library.collections;
 
-public class Book implements Comparable {
+public class Book implements Comparable<Book> {
 
     private String title;
     private String isbn;
@@ -39,9 +39,9 @@ public class Book implements Comparable {
                 '}';
     }
 
+
     @Override
-    public int compareTo(Object o) {
-        var otherBook = (Book) o;
+    public int compareTo(Book otherBook) {
         return isbn.compareTo(otherBook.getIsbn());
     }
 }
